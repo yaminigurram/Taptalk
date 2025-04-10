@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Real Time Chat Application</title>
+    <meta name="author" content="Gurram.Yamini Venkata Sai Lakshmi">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Style.css'>
+    <script src='Script.js' defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Chat Room</h1>
+        <form class="form" id="form">
+            <input class="input" type="text" placeholder="Name" id="myname">
+            <input class="input" type="text" placeholder="Message" id="message">
+            <button class="button">Send</button>
+        </form>
+        <div class="messageArea" id="messagearea"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+        let form = document.getElementById('form');
+        let myname = document.getElementById('myname');
+        let message = document.getElementById('message');
+        let messageArea = document.getElementById('messagearea');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (message.value) {
+                socket.emit('chat message', { name: myname.value, message: message.value });
+                message.value = '';
+            }
+        });
+
+        socket.on('chat message', ({ name, message }) => {
+            let chatContent = document.createElement("p");
+            chatContent.classList.add('message');
+            chatContent.innerHTML = `<span class="username">${name}:</span> ${message}`;
+            messageArea.appendChild(chatContent);
+        });
+    </script>
+</body>
+</html>

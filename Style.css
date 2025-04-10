@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(155, 158, 159);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(1, 1, 1);
+}
+
+.logo {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color:crimson;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Fix focus issue */
+.input:focus {
+    outline: 2px solid #ff7300;
+}
+
+.button {
+    background-color:crimson;
+    color: white;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color:slategrey;
+}
+
+.messageArea {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Ensure messages are visible */
+.message {
+    display: block;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.username {
+    font-weight: bold;
+    color: green;
+}
