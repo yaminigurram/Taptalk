@@ -7,4 +7,5 @@ The `<script src="/socket.io/socket.io.js">` line includes the Socket.IO client 
 
 Overall, the project serves as a solid foundation for understanding how real-time web applications work. It demonstrates the power of JavaScript and WebSockets through Socket.IO for building live features like chat systems. The code is clean, minimal, and well-structured, making it ideal for learning or extending into more advanced applications. Features like user authentication, message persistence, typing indicators, or private messaging can be easily integrated to expand its functionality. This basic chat application successfully captures the essence of real-time interactivity, making it a practical and educational tool for developers exploring modern web development.
 # output
-![image](https://github.com/user-attachments/assets/ee7563aa-86b7-4413-b392-f937396be41a)
+![image](https://github.com/user-attachments/assets/32831da5-fbcc-4dce-bc49-bc68f9822562)
+
